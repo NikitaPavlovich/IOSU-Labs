@@ -1,5 +1,6 @@
-select 
-"Size", SUM("Product"."ListPrice") as totalprice
-from "Production"."Product"
-where "ListPrice" > 100 and "Product"."Size" is not null
-group by "Size";
+SELECT "ProductLine"
+, AVG("ListPrice") AS AveragePrice
+FROM "Production"."Product"
+WHERE "ListPrice" IS NOT NULL
+GROUP BY "ProductLine"
+HAVING AVG("ListPrice") > 800;
