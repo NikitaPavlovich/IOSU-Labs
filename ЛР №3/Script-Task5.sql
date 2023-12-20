@@ -1,4 +1,4 @@
-SELECT 
+SELECT distinct 
   "a"."OrderDate", 
   "a"."CustomerID"
 FROM 
