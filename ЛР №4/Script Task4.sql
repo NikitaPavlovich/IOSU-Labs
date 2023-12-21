@@ -2,8 +2,9 @@ SELECT "Name"
 , "ListPrice"
 , "ProductLine"
 FROM "Production"."Product"
-WHERE ("ProductLine", "ListPrice") IN
-  (SELECT "ProductLine", MAX("ListPrice")
+WHERE  "ListPrice" =
+  (SELECT  MAX("ListPrice")
   FROM "Production"."Product"
-  GROUP BY "ProductLine");
+  WHERE  "ListPrice" > 0
+  );
 
