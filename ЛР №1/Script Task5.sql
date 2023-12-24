@@ -3,4 +3,4 @@ SELECT
 , "Title"
 , "FileExtension"
 FROM "Production"."Document"
-WHERE "Title" LIKE 'Assembly';
+WHERE "Title" LIKE '%Assembly%';

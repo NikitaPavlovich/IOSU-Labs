@@ -1,2 +1,2 @@
-select 
-* from "Production"."ProductDescription";
+select *
+from "Production"."ProductDescription";
